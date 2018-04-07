@@ -1,0 +1,7 @@
+<div className="search-bar">
+  <input id="search-bar-input"
+    value={{term}}
+    [(ngModel)]="term"
+    (keyup)="searchInputKeyUp($event)"
+  />
+</div>

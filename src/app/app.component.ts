@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  change(term :string){
+    console.log('term', term)
+  }
 }
