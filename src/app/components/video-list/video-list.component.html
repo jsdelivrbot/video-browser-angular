@@ -2,6 +2,6 @@
 <div *ngIf="videos">
   <ul class="col-md-4 list-group">
       <app-video-list-item [video]="selectedVideo" ></app-video-list-item>
-      <app-video-list-item [video]="video" (selectedVideoChange)="changeSelectedVideo($event)" *ngFor="let video of notSelectedVideos(videos)"></app-video-list-item>
+      <app-video-list-item [video]="video" (click)="changeSelectedVideo(video)" *ngFor="let video of notSelectedVideos(videos)"></app-video-list-item>
   </ul>
 </div>

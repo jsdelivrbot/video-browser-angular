@@ -10,13 +10,6 @@ export class VideoListItemComponent {
   @Input()
   video: any;
 
-  @Output()
-  selectedVideoChange: EventEmitter<any> = new EventEmitter<any>();
-
-  selectVideo(video){
-    this.selectedVideoChange.emit(video)
-  }
-
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges){
