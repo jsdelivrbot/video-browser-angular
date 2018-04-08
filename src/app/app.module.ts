@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { VideoDetailComponent } from './components/video-detail/video-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    VideoDetailComponent
   ],
   imports: [
     BrowserModule,
