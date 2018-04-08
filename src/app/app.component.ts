@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.change('surfboard')
+    this.change('surfboards')
   }
   selectedVideoChanged(video){
     this.selectedVideo = video
