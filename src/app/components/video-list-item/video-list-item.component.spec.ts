@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SimpleChange } from '@angular/core';
 
 import { VideoListItemComponent } from './video-list-item.component';
 
@@ -19,7 +20,18 @@ describe('VideoListItemComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
+    const mockVideo = {
+      snippet: {
+        title: 'teste'
+      },
+      id: {
+        videoId: 'videoid'
+      }
+    }
+    component.video = {}
+    component.ngOnChanges({video: new SimpleChange({}, mockVideo, true)});
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });
