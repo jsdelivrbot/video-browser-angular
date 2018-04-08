@@ -5,13 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { VideoDetailComponent } from './components/video-detail/video-detail.component';
+import { VideoListComponent } from './components/video-list/video-list.component';
+import { VideoListItemComponent } from './components/video-list-item/video-list-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    VideoDetailComponent
+    VideoDetailComponent,
+    VideoListComponent,
+    VideoListItemComponent
   ],
   imports: [
     BrowserModule,

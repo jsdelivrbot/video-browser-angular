@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-video-list-item',
@@ -16,6 +16,9 @@ export class VideoListItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  ngOnChanges(changes: SimpleChanges){
+    this.video = changes['video'].currentValue
   }
 
 }

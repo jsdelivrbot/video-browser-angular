@@ -1,0 +1,6 @@
+<div id="no-videos" *ngIf="!videos">Loading...</div>
+<div *ngIf="videos">
+  <ul class="col-md-4 list-group">
+      <app-video-list-item [video]="video" *ngFor="let video of videos"></app-video-list-item>
+  </ul>
+</div>

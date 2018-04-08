@@ -19,7 +19,6 @@ export class AppComponent {
       .then(videos => {
         this.videos = videos
         this.selectedVideo = videos[0]
-        console.log(this.selectedVideo)
       })
   }
   ngOnInit() {
