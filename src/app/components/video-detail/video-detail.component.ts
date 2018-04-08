@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChange } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -14,7 +14,7 @@ export class VideoDetailComponent {
   constructor( private sanitizer: DomSanitizer) {
   }
 
-  ngOnChanges(changes: SimpleChange){
+  ngOnChanges(changes: SimpleChanges){
     this.video = changes['video'].currentValue
     if(this.video){
       const videoId = this.video.id.videoId;

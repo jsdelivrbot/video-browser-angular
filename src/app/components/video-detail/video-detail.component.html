@@ -1,10 +1,10 @@
-<div *ngIf="!video">Loading...</div>
+<div id="no-video" *ngIf="!video">Loading...</div>
 <div *ngIf="video" className="video-detail col-md-8">
   <div className="embed-responsive embed-responsive-16by9">
     <iframe id="youtube-video-iframe" title="youtube embed video player" className="embed-responsive-item" [src]=url></iframe>
   </div>
   <div className="details">
-    <div className="details-title">{{video.snippet.title}}</div>
-    <div className="details-description">{{video.snippet.description}}</div>
+    <div id="details-title">{{video.snippet.title}}</div>
+    <div id="details-description">{{video.snippet.description}}</div>
   </div>
 </div>
