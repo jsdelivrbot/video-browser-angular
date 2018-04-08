@@ -5,18 +5,20 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@
   templateUrl: './video-list-item.component.html',
   styleUrls: ['./video-list-item.component.css']
 })
-export class VideoListItemComponent implements OnInit {
+export class VideoListItemComponent {
 
   @Input()
   video: any;
 
   @Output()
-  searchInputChangeEvent: EventEmitter<any> = new EventEmitter<any>();
+  selectedVideoChange: EventEmitter<any> = new EventEmitter<any>();
+
+  selectVideo(video){
+    this.selectedVideoChange.emit(video)
+  }
 
   constructor() { }
 
-  ngOnInit() {
-  }
   ngOnChanges(changes: SimpleChanges){
     this.video = changes['video'].currentValue
   }

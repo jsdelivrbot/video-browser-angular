@@ -1,5 +1,4 @@
-<!-- onClick={()=> onVideoSelect(video)} -->
-<li class="list-group-item">
+<li (click)="selectVideo(video)" class="list-group-item">
   <div class="video-list media">
     <div class="media-left">
       <img alt="video thumbnail" class="media-object" [src]=video.snippet.thumbnails.default.url />

@@ -14,6 +14,7 @@ const API_KEY = "AIzaSyCbwLwNN-h4LUgIALLOY38_xaQj0Nq_i4Q";
 export class AppComponent {
   videos: any[]
   selectedVideo: any
+
   change(term :string){
     searchYoutubeVideos(term)
       .then(videos => {
@@ -21,8 +22,12 @@ export class AppComponent {
         this.selectedVideo = videos[0]
       })
   }
+
   ngOnInit() {
     this.change('surfboard')
+  }
+  selectedVideoChanged(video){
+    this.selectedVideo = video
   }
 }
 

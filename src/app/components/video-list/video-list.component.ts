@@ -13,6 +13,10 @@ export class VideoListComponent implements OnInit {
   @Output()
   selectedVideoChange: EventEmitter<any> = new EventEmitter<any>();
 
+  changeSelectedVideo(video){
+    this.selectedVideoChange.emit(video)
+  }
+
   constructor() { }
 
   ngOnInit() {
