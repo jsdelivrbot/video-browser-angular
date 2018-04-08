@@ -38,14 +38,14 @@ describe('SearchBarComponent', () => {
     expect(de.nativeElement.value).toEqual('Updated Task 1');
     expect(component.term).toEqual('Updated Task 1');
   });
-  it('should emit update term on input change', () => {
+  it('should emit update term on input change', (done) => {
+    component.searchInputChangeEvent.subscribe(value => {
+      expect(value).toEqual('Updated Task 1');
+      done()
+    })
     const inputDe = fixture.debugElement.query(By.css('#search-bar-input'));
     const inputEl = inputDe.nativeElement;
     inputEl.value = 'Updated Task 1';
-    inputEl.dispatchEvent(new Event('input'));
-    component.searchInputChangeEvent.subscribe(value => console.log('value'))
+    inputEl.dispatchEvent(new Event('keyup'));
   });
-
-
-
 });
