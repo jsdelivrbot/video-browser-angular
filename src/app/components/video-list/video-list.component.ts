@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@
 @Component({
   selector: 'app-video-list',
   templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.css']
+  styleUrls: []
 })
 export class VideoListComponent implements OnInit {
 

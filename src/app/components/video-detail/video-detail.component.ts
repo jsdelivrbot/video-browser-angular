@@ -5,7 +5,7 @@ import { LOCATION_INITIALIZED } from '@angular/common';
 @Component({
   selector: 'app-video-detail',
   templateUrl: './video-detail.component.html',
-  styleUrls: ['./video-detail.component.css']
+  styleUrls: []
 })
 export class VideoDetailComponent {
 
