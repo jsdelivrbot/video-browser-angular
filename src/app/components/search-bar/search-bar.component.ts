@@ -8,7 +8,7 @@ import { Subject } from 'rxjs'
 })
 export class SearchBarComponent implements OnInit {
   private subject: Subject<string> = new Subject();
-  term: string = 'surfboard'
+  term: string = 'reactjs'
 
   @Output()
   searchInputChangeEvent: EventEmitter<string> = new EventEmitter<string>();

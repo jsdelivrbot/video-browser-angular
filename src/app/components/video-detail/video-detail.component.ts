@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { LOCATION_INITIALIZED } from '@angular/common';
 
 @Component({
   selector: 'app-video-detail',

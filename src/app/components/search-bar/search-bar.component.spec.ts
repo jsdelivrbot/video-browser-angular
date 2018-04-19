@@ -26,7 +26,7 @@ describe('SearchBarComponent', () => {
   it('should create input', () => {
     expect(component).toBeTruthy();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('#search-bar-input').value).toBe('surfboard');
+    expect(compiled.querySelector('#search-bar-input').value).toBe('reactjs');
   });
   it('should update term on input change', () => {
     const inputDe = fixture.debugElement.query(By.css('#search-bar-input'));

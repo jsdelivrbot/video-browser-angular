@@ -35,13 +35,12 @@ describe('VideoDetailComponent', () => {
         videoId: 'videoid'
       }
     }
-    component.video = {}
     component.ngOnChanges({video: new SimpleChange({}, mockVideo, true)});
     fixture.detectChanges();
     const de = fixture.debugElement.query(By.css('#youtube-video-iframe'));
     expect(de.nativeElement.src).toEqual('https://www.youtube.com/embed/videoid');
   });
-  it('should create video title and descriptio', () => {
+  it('should create video title and description', () => {
     const mockVideo = {
       snippet: {
         title: 'teste',
